@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deals</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/fragments.css">
+    <link rel="stylesheet" href="/css/deals.css">
+</head>
+<body>
+
+<div class="accordion">
+    <div class="accordion__item">
+        <section class="section">
+            <div class="section__headline">
+                <ul class="accordion__menu animated">
+                    <li class="has-children">
+                        <input type="checkbox" name ="group-1" id="group-1" checked>
+                        <label for="group-1">Главная</label>
+                        <ul>
+                            <li class="has-children">
+                                <input type="checkbox" name ="sub-group-1" id="sub-group-1">
+                                <label for="sub-group-1">Уроки</label>
+
+                                <div class="radio">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="color" value="indigo">
+                                        <span>Indigo</span>
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="color" value="red">
+                                        <span>Red</span>
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="color" value="brown" disabled="disabled">
+                                        <span>Brown</span>
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="color" value="yellow">
+                                        <span>Yellow</span>
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label class="custom-radio">
+                                        <input type="radio" name="color" value="green">
+                                        <span>Green</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="has-children">
+                                <input type="checkbox" name ="sub-group-2" id="sub-group-2">
+                                <label for="sub-group-2">Контакты</label>
+
+                                <ul>
+                                    <li class="has-children">
+                                        <input type="checkbox" name ="sub-group-level-3" id="sub-group-level-3">
+                                        <label for="sub-group-level-3">Интересно</label>
+
+                                        <ul>
+                                            <li><a href="#0">Как сделать</a></li>
+                                            <li><a href="#0">Подробно</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#0">Разработка</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#0">Веб-дизайн</a></li>
+                            <li><a href="#0">Вопросы</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div th:replace="~{/fragments/list_products::products}"></div>
+        </section>
+
+    </div>
+</div>
+
+<section class="pagination">
+    <nav role="pagination__nav">
+        <ul class="pagination__cd pagination__buttons">
+            <li class="pagination__button"><a href="#0">Prev</a></li>
+            <li><a class="pagination__current" href="#0">1</a></li>
+            <li><a href="#0">2</a></li>
+            <li><a  href="#0">3</a></li>
+            <li><span>...</span></li>
+            <li><a href="#0">10</a></li>
+            <li class="pagination__button"><a href="#0">Next</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- footer_start  -->
+<div th:replace="~{/fragments/footer::footer}"></div>
+<!-- footer_end  -->
+<script type="text/jаvascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</body>
+</html>
