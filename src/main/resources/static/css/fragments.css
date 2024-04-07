@@ -3,7 +3,7 @@
     width: 100%;
     background: #F0F0F0;
     display: block;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -83,10 +83,6 @@
 
 /*footer*/
 
-.sdsd{
-    background: #F0F0F0;
-    width: 1000px;
-}
 .product{
 
 }
@@ -98,10 +94,9 @@
 
 }
 .product__card{
-
 }
 .product__img{
-width: 100%;
+    width: 100%;
 }
 .product__title{
 
@@ -133,7 +128,7 @@ width: 100%;
     color: #FA6338;
 }
 .product__prise{
-padding-right: 10px;
+    padding-right: 10px;
 }
 .product__discount{
     font-family: Inter;

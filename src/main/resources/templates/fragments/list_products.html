@@ -1,21 +1,13 @@
 <th:block th:fragment="products">
-<!--    <div class="product">-->
-<!--        <ul class="product__list">-->
-        <ul class="team-listing">
-            <li class="item" th:each="prod : ${products}">
-<!--            <li class="prod uct__item" th:each="prod : ${products}">-->
-                <div class="product__card">
-                    <img class="product__img" src="/image/photo.svg" alt="" >
-                    <h4 class="product__title" th:text="${prod.getName()}"></h4>
-                    <div th:if="${prod.getDiscountId()==null}" class="product__cost">
-                        <span class="product__prise" th:text="${prod.getPrice()}+' грн'"></span>
-                    </div>
-                    <div th:unless="${prod.getDiscountId()==null}" class="product__cost--discount" >
-                        <span class="product__prise" th:text="${prod.getPrice()}+' грн'"></span>
-                        <div class="product__discount" th:text="${prod.getDiscountId()} + '%'"></div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-<!--    </div>-->
+    <div class="product__card">
+        <img class="product__img" src="/image/photo.svg" alt="" >
+        <h4 class="product__title" th:text="${prod.getName()}"></h4>
+        <div th:if="${prod.getDiscountId()==null}" class="product__cost">
+            <span class="product__prise" th:text="${prod.getPrice()}+' грн'"></span>
+        </div>
+        <div th:unless="${prod.getDiscountId()==null}" class="product__cost--discount" >
+            <span class="product__prise" th:text="${prod.getPrice()}+' грн'"></span>
+            <div class="product__discount" th:text="${prod.getDiscountId()} + '%'"></div>
+        </div>
+    </div>
 </th:block>
