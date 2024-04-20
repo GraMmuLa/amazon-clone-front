@@ -17,15 +17,15 @@ public class DealsController {
         ModelAndView deals = new ModelAndView("deals");
 
         RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject("http://localhost:8081/products/all", String.class);
+//        String result = restTemplate.getForObject("http://localhost:8081/products/all", String.class);
 
-        ArrayList<Product> products = new ArrayList<>();
-        JSONArray jsonArray = new JSONArray(result);
-        for(Object jsonObject : jsonArray) {
-            products.add(new Product((JSONObject) jsonObject));
-        }
+//        ArrayList<Product> products = new ArrayList<>();
+//        JSONArray jsonArray = new JSONArray(result);
+//        for(Object jsonObject : jsonArray) {
+//            products.add(new Product((JSONObject) jsonObject));
+//        }
 
-        deals.addObject("products", products);
+//        deals.addObject("products", products);
 
         return deals;
     }
