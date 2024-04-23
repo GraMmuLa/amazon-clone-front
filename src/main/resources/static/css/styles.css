@@ -79,11 +79,11 @@ a {
     aspect-ratio: 1;
 }
 
-.basket /*global-header__basket*/ {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/*.basket !*global-header__basket*! {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*}*/
 
 .banner /*global-main__banner*/ {
     width: 100%;

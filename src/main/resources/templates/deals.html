@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Deals</title>
+    <title>Сьогоднішні пропозиції</title>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/fragments.css">
     <link rel="stylesheet" href="/css/deals.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!--header-->
+<div th:replace="/fragments/header.html::header"></div>
+<!--header-->
+<h1 class="page-name">Сьогоднішні пропозиції</h1>
+<!--category-->
+<div th:replace="/fragments/category.html::category"></div>
+<!--category-->
 
+<div class="sort">
+    <div class="sort__container">
+        <input id="f2221" class="sort__input" type="checkbox">
+        <label for="f2221" class="sort__title sort__down">Сортувати по</label>
+        <div class="sort__body">
+            <a class="sort__link" href="/">Популярності</a>
+            <a class="sort__link" href="/">Новизні</a>
+            <a class="sort__link" href="/">Зростанню ціни</a>
+            <a class="sort__link" href="/">Спадання ціни</a>
+        </div>
+    </div>
+</div>
 <section class="section">
     <div class="section__headline">
         <div class="filter-menu">
@@ -139,12 +162,11 @@
     <div class="">
         <ul class="section__products ">
             <li class="section__products-item" th:each="prod : ${products}">
-                <div th:replace="~{/fragments/list_products::products}"></div>
+                <div th:replace="/fragments/list_products.html::products"></div>
             </li>
         </ul>
     </div>
 </section>
-
 
 <section class="pagination">
     <nav role="pagination__nav">
@@ -162,8 +184,9 @@
 </section>
 
 <!-- footer_start  -->
-<div th:replace="~{/fragments/footer::footer}"></div>
+<div th:replace="/fragments/footer.html::footer"></div>
 <!-- footer_end  -->
+
 <script type="text/jаvascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </body>
 </html>
